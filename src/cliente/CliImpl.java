@@ -14,9 +14,12 @@ import rmi.InterfaceServ;
 public class CliImpl extends UnicastRemoteObject  implements InterfaceCli{
 
     InterfaceServ server;
-
-    
     String nome;    
+
+    public String getNome() {
+        return nome;
+    }
+    
     public CliImpl(InterfaceServ server) throws RemoteException
     {   
         this.server = server;
